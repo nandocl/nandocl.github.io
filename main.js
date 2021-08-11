@@ -122,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class Utils {
     getMachineInfo() {
-        var _a, _b, _c, _d, _e, _f, _g;
+        var _a, _b, _c, _d;
         let parser = new ua_parser_js__WEBPACK_IMPORTED_MODULE_0__["UAParser"]();
         let res = parser.getResult();
         const info = {
@@ -130,11 +130,9 @@ class Utils {
             browserVersion: (_b = res.browser.version) !== null && _b !== void 0 ? _b : 'Unknown',
             osName: (_c = res.os.name) !== null && _c !== void 0 ? _c : 'Unknown',
             osVersion: (_d = res.os.version) !== null && _d !== void 0 ? _d : 'Unknown',
-            osVersion2: (_e = navigator.platform) !== null && _e !== void 0 ? _e : 'Unknown',
-            deviceModel: (_f = res.device.model) !== null && _f !== void 0 ? _f : 'Unknown',
-            deviceType: (_g = res.device.type) !== null && _g !== void 0 ? _g : 'Unknown'
+            osVersion2: navigator.platform
         };
-        return info;
+        return navigator.platform;
     }
 }
 Utils.ɵfac = function Utils_Factory(t) { return new (t || Utils)(); };
