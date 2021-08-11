@@ -132,7 +132,7 @@ class Utils {
             osVersion: (_d = res.os.version) !== null && _d !== void 0 ? _d : 'Unknown',
             osVersion2: navigator.platform
         };
-        return navigator.platform;
+        return info;
     }
 }
 Utils.ɵfac = function Utils_Factory(t) { return new (t || Utils)(); };
